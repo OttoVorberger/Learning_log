@@ -1,0 +1,22 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block title %}
+New entry
+{% endblock %}
+
+{% block css %}
+.a1 {
+    color: #fff;
+    background-color: var(--theme-button-primary-background-color);
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 40%);
+{% endblock css %}
+
+{% block content %}
+<p><a href="{% url 'topic' topic.id %}">{{ topic }}</a></p>
+<p>Add a new entry</p>
+<form action="{% url 'new_entry' topic.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="a1"><h1>Add entry</h1></button>
+</form>
+{% endblock content %}
