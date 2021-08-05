@@ -6,6 +6,7 @@ Topics
 
 
 {% block content %}
+<div align="center">
 <p>Topics</p>
 <ul>
     {% for topic in topics %}
@@ -18,5 +19,5 @@ Topics
 </ul>
 
 <a href="{% url 'new_topic' %}">Add a new topic</a>
-
+</div>
 {% endblock content %}
