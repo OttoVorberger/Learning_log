@@ -145,7 +145,7 @@ a {
           <li><a href="{% url 'index' %}">Learning Log</a></li>
           <li><a href="{% url 'topics' %}">Topics</a></li>
             {% if user.is_authenticated %}
-            Hello, {{ user.username }}.
+            <li><a href="#">Hello, {{ user.username }}.</a></li>
             <li><a href="{% url 'users:logout' %}">Log out</a></li>
             {% else %}
             <li><a href="{% url 'users:register' %}">Register</a></li>
